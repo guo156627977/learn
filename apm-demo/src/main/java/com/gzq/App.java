@@ -1,4 +1,4 @@
-package com.gzq.learn;
+package com.gzq;
 
 /**
  * Hello world!

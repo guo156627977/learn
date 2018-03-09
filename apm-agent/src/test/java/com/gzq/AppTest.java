@@ -1,4 +1,4 @@
-package com.gzq.learn;
+package com.gzq;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
