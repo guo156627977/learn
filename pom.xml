@@ -8,6 +8,10 @@
     <modules>
         <module>redis</module>
         <module>rocketmq</module>
+        <module>algorithm</module>
+        <module>apm-agent</module>
+        <module>apm-demo</module>
+        <module>juc</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -22,6 +26,10 @@
 
         <rocketmq.version>4.2.0</rocketmq.version>
         <jedis.version>2.9.0</jedis.version>
+
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <mysql.version>5.1.32</mysql.version>
+        <javassist.version>3.18.1-GA</javassist.version>
 
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
@@ -38,17 +46,40 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client -->
+
+            <!--rocketmq-->
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq.version}</version>
             </dependency>
+
+            <!--redis-->
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
             </dependency>
+
+            <!--apm -->
+            <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
     <build>

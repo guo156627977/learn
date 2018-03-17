@@ -14,6 +14,11 @@ public class Test {
 
         StringBuilder stringBuilder = new StringBuilder();
         ArrayList<String> objects = new ArrayList<>();
+
+        System.out.println(objects==null);
+        System.out.println(objects.size()==0);
+
+
         System.out.println("objects.toString() = " + objects.toString());
 
         System.out.println(stringBuilder.toString().equals(""));
