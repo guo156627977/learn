@@ -12,9 +12,9 @@
         <module>apm-agent</module>
         <module>apm-demo</module>
         <module>juc</module>
-        <module>dubbo</module>
         <module>dubbo-provider</module>
         <module>dubbo-consumer</module>
+        <module>dubbo-common</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -32,11 +32,13 @@
 
         <c3p0.version>0.9.1.2</c3p0.version>
         <mysql.version>5.1.32</mysql.version>
-       <javassist.version>javassist-3.18.1-GA</javassist.version>
+        <javassist.version>javassist-3.18.1-GA</javassist.version>
 
         <dubbo.version>2.6.1</dubbo.version>
         <zookeeper.version>3.4.10</zookeeper.version>
 
+        <spark.version>2.2.1</spark.version>
+        <scala.version>2.11.8</scala.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
@@ -46,6 +48,35 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-streaming_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-hive_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-mllib_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+
+
+            <!--dubbo-->
             <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-client -->
             <dependency>
                 <groupId>org.apache.curator</groupId>
@@ -153,6 +184,9 @@
                         </execution>
                     </executions>
                 </plugin>
+
+
+
             </plugins>
 
         </pluginManagement>
