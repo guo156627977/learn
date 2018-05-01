@@ -17,6 +17,7 @@ package com.tl.jedis;/*
  * 悟空老师QQ：245553999
  */
 
+import org.junit.Test;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.JedisCluster;
 import redis.clients.jedis.JedisPoolConfig;
