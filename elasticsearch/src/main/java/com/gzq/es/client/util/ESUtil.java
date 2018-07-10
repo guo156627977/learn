@@ -3,6 +3,7 @@ package com.gzq.es.client.util;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
+import org.elasticsearch.client.Client;
 import org.elasticsearch.client.IndicesAdminClient;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
@@ -38,7 +39,7 @@ public class ESUtil {
      * @return
      * @throws UnknownHostException
      */
-    public static TransportClient getClient() {
+    public static Client getClient() {
         if (client == null) {
             synchronized (TransportClient.class) {
                 try {
