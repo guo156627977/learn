@@ -16,6 +16,7 @@
         <module>dubbo-consumer</module>
         <module>dubbo-common</module>
         <module>elasticsearch</module>
+        <module>netty</module>
     </modules>
     <packaging>pom</packaging>
 
