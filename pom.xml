@@ -17,6 +17,7 @@
         <module>dubbo-common</module>
         <module>elasticsearch</module>
         <module>netty</module>
+        <module>zookeeper</module>
     </modules>
     <packaging>pom</packaging>
 

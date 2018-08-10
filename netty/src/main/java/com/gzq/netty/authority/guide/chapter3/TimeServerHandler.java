@@ -3,7 +3,7 @@ package com.gzq.netty.authority.guide.chapter3;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import java.util.Date;
  * @description
  * @created 2018-08-03 18:29.
  */
-public class TimeServerHandler extends SimpleChannelInboundHandler {
+public class TimeServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf buf = (ByteBuf) msg;
@@ -35,8 +35,4 @@ public class TimeServerHandler extends SimpleChannelInboundHandler {
         ctx.close();
     }
 
-    @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("msg = " + msg);
-    }
 }
